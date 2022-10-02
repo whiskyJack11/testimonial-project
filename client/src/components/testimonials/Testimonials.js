@@ -2,7 +2,7 @@ import {useState, useEffect} from 'react';
 import axios from 'axios';
 import Testimonial  from './testimonial/Testimonial.js';
 const Testinomials = () => {
-    const url = "http://localhost:5000/testimonials";
+    const url = "https://6339ca3b5adf257feff32dcd--keen-duckanoo-3d7c61.netlify.app/";
 
     const [testimonials, setTestimonials] = useState([]);
     const fetchTestimonials = async () => {
