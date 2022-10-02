@@ -33,5 +33,19 @@ export const updateTestimonial = async (req, res) => {
     )
 };
 export const deleteTestimonial = async (req, res) => {
-    
+    const testimonial = req.body;
+    const query = {id: testimonial.id};
+    Testimonial.updateOne(query,
+
+        {
+            $set: {
+                "active": 0
+            }
+        },
+        function(err, doc) {
+            if(err) return res.status(500).json({message: err});
+            return res.status(200).json({message: "Succesfully deleted"})
+
+        }
+    )
 } 

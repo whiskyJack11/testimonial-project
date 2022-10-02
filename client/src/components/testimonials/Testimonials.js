@@ -30,7 +30,7 @@ const Testinomials = () => {
 
 {
     testimonials && testimonials.map((item, index)=> {
-        return <Testimonial name={item.name} description={item.description} post={item.post} />
+        return <Testimonial key={index} name={item.name} description={item.description} post={item.post} />
     })
 }
 
